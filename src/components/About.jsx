@@ -9,6 +9,9 @@ import Testimonial from "../assets/testimonial.pdf";
 
 import PortfolioImage from "../assets/protfolio image.png"
 
+import { SectionWrapper } from "../hoc"
+
+/* eslint-disable react-refresh/only-export-components */
 const About = () => {
 
     const HandleResumeClick = () => window.open(Resume, "_blank");
@@ -17,8 +20,7 @@ const About = () => {
     return (
         <>
             <div
-                id="About"
-                className="mt-4 !px-10 lg:!px-24 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start"
+                className="mt-4 !px-5 lg:!px-25 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start"
             >
                 {/* IMAGE FIRST on mobile, RIGHT column on desktop */}
                 <motion.div
@@ -59,15 +61,15 @@ const About = () => {
                         <button
                             onClick={HandleResumeClick}
                             className="
-          font-poppins text-[15px] font-semibold tracking-[0.8px] text-white
-          border-2 border-white/25 bg-transparent
-          !px-5 !py-1 rounded-full
-          transition-all duration-300
-          hover:bg-[#915eff] hover:border-[#915eff]
-          hover:-translate-y-[2px]
-          hover:shadow-[0_0_18px_rgba(145,94,255,0.75),0_0_38px_rgba(145,94,255,0.45)]
-          active:translate-y-0 cursor-pointer
-        "
+                                font-poppins text-[15px] font-semibold tracking-[0.8px] text-white
+                                border-2 border-white/25 bg-transparent
+                                !px-5 !py-1 rounded-full
+                                transition-all duration-300
+                                hover:bg-[#915eff] hover:border-[#915eff]
+                                hover:-translate-y-[2px]
+                                hover:shadow-[0_0_18px_rgba(145,94,255,0.75),0_0_38px_rgba(145,94,255,0.45)]
+                                active:translate-y-0 cursor-pointer
+                            "
                         >
                             Resume
                         </button>
@@ -75,15 +77,15 @@ const About = () => {
                         <button
                             onClick={HandleTestimonialClick}
                             className="
-          font-poppins text-[15px] font-semibold tracking-[0.8px] text-white
-          border-2 border-white/25 bg-transparent
-          !px-5 !py-1 rounded-full
-          transition-all duration-300
-          hover:bg-[#915eff] hover:border-[#915eff]
-          hover:-translate-y-[2px]
-          hover:shadow-[0_0_18px_rgba(145,94,255,0.75),0_0_38px_rgba(145,94,255,0.45)]
-          active:translate-y-0 cursor-pointer
-        "
+                                font-poppins text-[15px] font-semibold tracking-[0.8px] text-white
+                                border-2 border-white/25 bg-transparent
+                                !px-5 !py-1 rounded-full
+                                transition-all duration-300
+                                hover:bg-[#915eff] hover:border-[#915eff]
+                                hover:-translate-y-[2px]
+                                hover:shadow-[0_0_18px_rgba(145,94,255,0.75),0_0_38px_rgba(145,94,255,0.45)]
+                                active:translate-y-0 cursor-pointer
+                            "
                         >
                             Testimonials
                         </button>
@@ -96,4 +98,4 @@ const About = () => {
     )
 }
 
-export default About
+export default SectionWrapper(About, "About")

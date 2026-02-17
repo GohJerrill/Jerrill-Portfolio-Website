@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import TechStack from "./components/TechStack";
 
 
 
@@ -19,6 +20,7 @@ function App() {
         </div>
         <About/>
         {/* Tech Stack and Certs */}
+        <TechStack/>
         {/* Projects  */}
         {/* Events Joined  */}
         <div className="relative z-0">

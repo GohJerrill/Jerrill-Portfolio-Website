@@ -146,7 +146,7 @@ const Navbar = () => {
                     </div>
 
                     {/* 2. THE NAV */}
-                    <ul className="mt-6 flex flex-col gap-8 w-full !px-3">
+                    <ul className="!mt-4 flex flex-col gap-8 w-full !px-3">
                         {navItems.map((item) => (
                             <li
                                 key={item}
