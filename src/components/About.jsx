@@ -26,15 +26,21 @@ const About = () => {
                 <motion.div
                     variants={fadeIn("left", "", 0.15, 1)}
                     className="order-1 lg:order-2 flex justify-center lg:justify-end self-start lg:-translate-y-4"
-                    animate={{ y: [-7, 7, -7] }}
-                    transition={{ duration: 3, ease: "linear", repeat: Infinity }}
                 >
-                    <img
-                        src={PortfolioImage}
-                        alt="Portfolio"
-                        className="w-[220px] sm:w-[280px] md:w-[280px] lg:w-[300px] object-contain"
-                    />
+                    {/* floating should be on a nested motion element */}
+                    <motion.div
+                        animate={{ y: [-7, 7, -7] }}
+                        transition={{ duration: 3, ease: "linear", repeat: Infinity }}
+                    >
+                        <img
+                            src={PortfolioImage}
+                            alt="Portfolio"
+                            className="w-[220px] sm:w-[280px] md:w-[280px] lg:w-[300px] object-contain"
+                            draggable="false"
+                        />
+                    </motion.div>
                 </motion.div>
+
 
                 {/* TEXT SECOND on mobile, LEFT column on desktop */}
                 <div className="order-2 lg:order-1 text-center lg:text-left">
