@@ -12,7 +12,7 @@ const Navbar = () => {
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
 
-    const navItems = ["Home", "Tech Stack", "Projects", "Experience", "Contact Me"];
+    const navItems = ["Home", "TechStack", "Projects", "Experience", "Contact Me"];
 
     const socials = [
         { href: "https://www.linkedin.com/in/goh-jerrill-009b63284/", icon: social1, label: "LinkedIn" },
@@ -20,9 +20,17 @@ const Navbar = () => {
         { href: "mailto:gohjerrill316@gmail.com", icon: social3, label: "Email" },
     ];
 
+    // LOGIC FIX: Scrolls to the ID and handles state
     const handleNavClick = (item) => {
         setActive(item);
         setToggle(false);
+        const element = document.getElementById(item);
+
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else if (item === "Home") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
     };
 
     return (
@@ -57,7 +65,7 @@ const Navbar = () => {
                                 <li
                                     key={item}
                                     onClick={() => handleNavClick(item)}
-                                    className={`cursor-pointer font-iceland lg:text-[24px] md:text-[20px] transition-all duration-300 hover:text-[#915eff] hover:scale-[1.05] ${active === item ? "text-sky-400" : "text-white"
+                                    className={`cursor-pointer font-iceland lg:text-[24px] md:text-[20px] transition-all duration-300 hover:text-[#915eff] hover:scale-[1.05] ${active === item ? "text-[#915eff]" : "text-white"
                                         }`}
                                 >
                                     {item}
@@ -112,17 +120,17 @@ const Navbar = () => {
                 className={`sm:hidden fixed inset-0 z-[10000] transition-opacity duration-300 ${toggle ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                     }`}
             >
-                {/* Overlay - This is the part that SHOULD be transparent/dimmed */}
+                {/* Overlay */}
                 <div
                     className="absolute inset-0 bg-black/70"
                     onClick={() => setToggle(false)}
                 />
 
-                {/* Drawer - FIXED: Added 'opacity-100' and solid hex to ensure it is NOT transparent */}
+                {/* Drawer */}
                 <div className={`absolute top-0 right-0 h-full w-[75%] max-w-[300px] bg-[#050816] opacity-100 border-l border-white/10 flex flex-col transition-transform duration-300 ease-in-out ${toggle ? "translate-x-0" : "translate-x-full"
                     }`}>
 
-                    {/* 1. THE HEADER - Logo sits naturally now */}
+                    {/* 1. THE HEADER */}
                     <div className="flex items-center justify-between w-full pt-10 pb-6 pl-8 pr-12">
 
                         <div className="flex items-center">
@@ -151,7 +159,7 @@ const Navbar = () => {
                             <li
                                 key={item}
                                 onClick={() => handleNavClick(item)}
-                                className={`font-iceland text-[28px] cursor-pointer transition-colors ${active === item ? "text-sky-400" : "text-white"
+                                className={`font-iceland text-[28px] cursor-pointer transition-colors ${active === item ? "text-[#915eff]" : "text-white"
                                     }`}
                             >
                                 {item}
@@ -159,11 +167,9 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-
                     <div className="h-4 w-full shrink-0"></div>
 
-
-                    {/* 3. THE SOCIALS: Changed px-8 to pl-14 to match the Nav */}
+                    {/* 3. THE SOCIALS */}
                     <div className="mt-auto pr-8 pb-16 pl-14 !px-3">
                         <div className="w-full h-[1px] bg-white/10 mb-8 ml-6" />
                         <div className="flex gap-5">

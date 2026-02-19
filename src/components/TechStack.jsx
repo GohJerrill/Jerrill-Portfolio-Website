@@ -1,75 +1,215 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { styles } from "../styles"
-import { textVariant } from "../utils/motion"
-import { Frameworks } from './Frameworks'
+// import React from 'react'
+// import { motion } from 'framer-motion'
+// import { styles } from "../styles"
+// import { textVariant } from "../utils/motion"
+// import { Frameworks } from './Frameworks'
 
+// import { SectionWrapper } from '../hoc'
+
+// /* eslint-disable react-refresh/only-export-components */
+// const TechStack = () => {
+//     const FrontendSkills = ["React", "HTML", "CSS", "ThreeJS", "Framer Motion", "TailwindCSS", "MUI", "MagicUI", "Flutter", "AWS"]
+//     const backendSkills = ["Node.js", "Express", "SQL", "MongoDB", "Firebase", "DynamoDB", "RDS"];
+//     const devOpsSkills = ["Github", "Github Actions", "Jenkins", "PlayWright", "Jest", "Cypress", "Postman", "MiniKube", "Docker", "Podman", "Kubernetes"];
+//     const languageSkills = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Dart"];
+
+//     return (
+//         <div className="!mt-10 !px-5 lg:!pl-25 lg:!pr-0 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start overflow-hidden">
+
+//             {/* TEXT SIDE */}
+//             <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+//                 <motion.div variants={textVariant()} className="w-full">
+//                     <p className={`${styles.sectionSubText} !mb-1 text-center lg:text-left`}>Tech Stack</p>
+//                     <h2 className={`${styles.sectionHeadText} text-gray-300 !mt-0 leading-tight text-center lg:text-left`}>
+//                         Skills BABY.
+//                     </h2>
+//                 </motion.div>
+
+//                 <div className="!mt-5 w-full flex flex-col gap-5">
+
+//                     {/* 1 */}
+//                     <div className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+//                         <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-sky-400 text-[25px] text-center lg:text-left">
+//                             Application Development
+//                         </h3>
+//                         <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+//                             {FrontendSkills.map((skill) => (
+//                                 <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+//                                     {skill}
+//                                 </span>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                     {/* 2 */}
+//                     <div className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+//                         <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-purple-400 text-[25px] mb-4 text-center lg:text-left">
+//                             Backend + DB
+//                         </h3>
+//                         <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+//                             {backendSkills.map((skill) => (
+//                                 <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+//                                     {skill}
+//                                 </span>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                     {/* 3 */}
+//                     <div className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+//                         <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-red-500 text-[25px] mb-4 text-center lg:text-left">
+//                             DevOps
+//                         </h3>
+//                         <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+//                             {devOpsSkills.map((skill) => (
+//                                 <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+//                                     {skill}
+//                                 </span>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                     {/* 4 */}
+//                     <div className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+//                         <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-emerald-400 text-[25px] mb-4 text-center lg:text-left">
+//                             Languages
+//                         </h3>
+//                         <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+//                             {languageSkills.map((skill) => (
+//                                 <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+//                                     {skill}
+//                                 </span>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                 </div>
+//             </div>
+
+//             {/* ORBIT SIDE (hidden on phone already) */}
+//             <div className="hidden lg:flex order-1 lg:order-2 justify-center lg:justify-end self-start lg:-translate-y-10 relative h-full w-full">
+//                 <div className="!mt-25 absolute top-1/2 left-[50%] lg:left-[50%] xl:left-[50%] -translate-y-1/2 w-full flex items-center justify-center lg:scale-125 xl:scale-150 transform-gpu">
+//                     <Frameworks />
+//                 </div>
+//             </div>
+
+//         </div>
+//     )
+// }
+
+// export default SectionWrapper(TechStack, "TechStack")
+
+
+
+
+import React from "react";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { textVariant, fadeIn } from "../utils/motion"; 
+import { Frameworks } from "./Frameworks";
+import { SectionWrapper } from "../hoc";
+
+/* eslint-disable react-refresh/only-export-components */
 const TechStack = () => {
-    const FrontendSkills = ["React", "HTML", "CSS", "ThreeJS", "Framer Motion", "TailwindCSS", "MUI", "MagicUI", "Flutter", "AWS"]
-    const backendSkills = ["Node.js", "Express", "SQL", "MongoDB", "Firebase", "DynamoDB", "RDS"];
-    const devOpsSkills = ["Github", "Github Actions", "Jenkins", "PlayWright", "Jest", "Cypress", "Postman", "MiniKube", "Docker", "Podman", "Kubernetes"];
+    const FrontendSkills = ["React", "HTML", "CSS", "ThreeJS", "Framer Motion", "TailwindCSS", "MUI", "MagicUI", "Flutter", "AWS", "Vitejs","Figma"];
+    const backendSkills = ["Node.js", "Express", "MySQL", "MongoDB", "Firebase", "DynamoDB", "RDS", "Lambda"];
+    const devOpsSkills = ["Github", "Github Actions", "Jenkins", "PlayWright", "Jest", "Cypress", "Postman", "Docker", "Podman", "Kubernetes"];
     const languageSkills = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Dart"];
 
     return (
-        /* Changed !px to !pl to keep the left side original, but removed right padding (!pr-0) */
-        <div className="!mt-10 !pl-5 lg:!pl-25 !pr-0 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start overflow-hidden">
-
-            {/* TEXT SIDE - REMAINING EXACTLY THE SAME */}
-            <div className="order-2 lg:order-1 text-center lg:text-left">
-                <motion.div variants={textVariant()}>
+        <div className="!mt-10 !px-5 lg:!pl-25 lg:!pr-0 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start overflow-hidden">
+            {/* TEXT SIDE */}
+            <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+                <motion.div variants={textVariant()} className="w-full">
                     <p className={`${styles.sectionSubText} !mb-1 text-center lg:text-left`}>Tech Stack</p>
                     <h2 className={`${styles.sectionHeadText} text-gray-300 !mt-0 leading-tight text-center lg:text-left`}>
                         Skills BABY.
                     </h2>
                 </motion.div>
 
-                <div className="!mt-5 flex flex-col gap-5">
-                    <div className="!p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <h3 className="!ml-2 !mb-1 font-iceland text-sky-400 text-[25px] text-left">Application Development</h3>
-                        <div className="flex flex-wrap gap-2">
+                <div className="!mt-5 w-full flex flex-col gap-5">
+                    {/* 1 */}
+                    <motion.div
+                        variants={fadeIn("up", "spring", 0.15, 0.75)}
+                        className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                    >
+                        <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-sky-400 text-[25px] text-center lg:text-left">
+                            Application Development
+                        </h3>
+                        <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                             {FrontendSkills.map((skill) => (
-                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">{skill}</span>
+                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+                                    {skill}
+                                </span>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="!p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <h3 className="!ml-2 !mb-1 font-iceland text-purple-400 text-[25px] mb-4 text-left">Backend + DB</h3>
-                        <div className="flex flex-wrap gap-2">
+                    {/* 2 */}
+                    <motion.div
+                        variants={fadeIn("up", "spring", 0.25, 0.75)}
+                        className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                    >
+                        <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-purple-400 text-[25px] mb-4 text-center lg:text-left">
+                            Backend + DB
+                        </h3>
+                        <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                             {backendSkills.map((skill) => (
-                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">{skill}</span>
+                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+                                    {skill}
+                                </span>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="!p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <h3 className="!ml-2 !mb-1 font-iceland text-red-500 text-[25px] mb-4 text-left">DevOps</h3>
-                        <div className="flex flex-wrap gap-2">
+                    {/* 3 */}
+                    <motion.div
+                        variants={fadeIn("up", "spring", 0.35, 0.75)}
+                        className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                    >
+                        <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-red-500 text-[25px] mb-4 text-center lg:text-left">
+                            DevOps
+                        </h3>
+                        <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                             {devOpsSkills.map((skill) => (
-                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">{skill}</span>
+                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+                                    {skill}
+                                </span>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="!p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <h3 className="!ml-2 !mb-1 font-iceland text-emerald-400 text-[25px] mb-4 text-left">Languages</h3>
-                        <div className="flex flex-wrap gap-2">
+                    {/* 4 */}
+                    <motion.div
+                        variants={fadeIn("up", "spring", 0.45, 0.75)} 
+                        className="w-full max-w-[680px] md:max-w-none mx-auto md:mx-0 !p-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                    >
+                        <h3 className="!ml-0 lg:!ml-2 !mb-1 font-iceland text-emerald-400 text-[25px] mb-4 text-center lg:text-left">
+                            Languages
+                        </h3>
+                        <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                             {languageSkills.map((skill) => (
-                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">{skill}</span>
+                                <span key={skill} className="!px-4.5 !py-1 rounded-full bg-black/40 border border-white/10 text-white text-[15px]">
+                                    {skill}
+                                </span>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
-            {/* ORBIT SIDE - Shifted further right to hug the edge */}
-            <div className="order-1 lg:order-2 flex justify-center lg:justify-end self-start lg:-translate-y-10 relative h-full w-full">
-                <div className="!mt-25 absolute top-1/2 left-[60%] lg:left-[50%] -translate-y-1/2 w-full flex items-center justify-center lg:scale-150 transform-gpu">
+            {/* ORBIT SIDE */}
+            <motion.div
+                variants={fadeIn("left", "spring", 0.2, 1)} 
+                className="hidden lg:flex order-1 lg:order-2 justify-center lg:justify-end self-start lg:-translate-y-10 relative h-full w-full"
+            >
+                <div className="!mt-25 absolute top-1/2 left-[50%] lg:left-[50%] xl:left-[50%] -translate-y-1/2 w-full flex items-center justify-center lg:scale-125 xl:scale-150 transform-gpu">
                     <Frameworks />
                 </div>
-            </div>
+            </motion.div>
         </div>
-    )
-}
+    );
+};
 
-export default TechStack
+export default SectionWrapper(TechStack, "TechStack");
+

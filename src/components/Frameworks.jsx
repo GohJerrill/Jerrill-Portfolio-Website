@@ -1,30 +1,29 @@
 import { OrbitingCircles } from "./OrbitingCircles";
 
 export function Frameworks() {
-    // Re-distributed skills for three distinct rings
-    const outerSkills = ["react", "html5", "css3", "javascript", "tailwindcss", "vitejs"];
-    const middleSkills = ["wordpress", "git", "auth0", "blazor", "cplusplus"];
-    const innerSkills = ["csharp", "dotnet", "dotnetcore", "microsoft", "sqlite"];
+    const outerSkills = ["react", "html5", "css3", "MongoDB", "tailwindcss", "vitejs", "kubernetes", "node", "Github", "Docker", "AWS", "Figma"];
+    const middleSkills = ["javascript", "git", "azure", "MiniKube", "mysql", "Flutter", "Firebase", "CYPRESS-NEW-2", "Jest", "Playwrite", "DynamoDB"];
+    const innerSkills = ["Dart", "Lambda", "Python", "Postman", "MaterialUI", "Jenkins-NEW"];
 
     return (
-        /* Kept the 600px height to ensure the 250px radius doesn't clip */
-        <div className="relative flex h-[700px] w-full items-center justify-center">
+        <div className="relative flex h-[600px] w-[620px] min-w-[620px] items-center justify-center">
 
-            {/* 1. OUTER RING (Unchanged size) */}
-            <OrbitingCircles iconSize={50} radius={260} duration={30}>
+            {/* 1. OUTER RING - Radius 260 */}
+            <OrbitingCircles iconSize={50} radius={260} duration={35}>
                 {outerSkills.map((skill, index) => (
                     <Icon key={`outer-${index}`} src={`/logos/${skill}.svg`} alt={skill} />
                 ))}
             </OrbitingCircles>
 
-            <OrbitingCircles iconSize={42} radius={177} reverse duration={25}>
+            {/* 2. MIDDLE RING - Radius 180 (New Middle Column) */}
+            <OrbitingCircles iconSize={40} radius={180} reverse duration={25}>
                 {middleSkills.map((skill, index) => (
                     <Icon key={`middle-${index}`} src={`/logos/${skill}.svg`} alt={skill} />
                 ))}
             </OrbitingCircles>
 
-            {/* 3. INNER RING (Unchanged size) */}
-            <OrbitingCircles iconSize={35} radius={100} duration={20}>
+            {/* 3. INNER RING - Radius 100 */}
+            <OrbitingCircles iconSize={30} radius={100} duration={20}>
                 {innerSkills.map((skill, index) => (
                     <Icon key={`inner-${index}`} src={`/logos/${skill}.svg`} alt={skill} />
                 ))}
