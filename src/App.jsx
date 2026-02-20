@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import TechStack from "./components/TechStack";
+import Works from "./components/Works";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         {/* Tech Stack and Certs */}
         <TechStack/>
         {/* Projects  */}
+        <Works/>
         {/* Events Joined  */}
         <div className="relative z-0">
           {/* Contact Me  */}
