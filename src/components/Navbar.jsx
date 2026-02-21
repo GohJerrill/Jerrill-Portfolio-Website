@@ -12,7 +12,7 @@ const Navbar = () => {
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
 
-    const navItems = ["Home", "TechStack", "Projects", "Experience", "Contact Me"];
+    const navItems = ["Home", "TechStack", "Projects", "Certs", "Contact Me"];
 
     const socials = [
         { href: "https://www.linkedin.com/in/goh-jerrill-009b63284/", icon: social1, label: "LinkedIn" },

@@ -12,15 +12,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                 scale={1}
                 transitionSpeed={450}
                 className="bg-[#151030] !p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
-
             >
-                <div className="relative w-full h-[230px]">
+                <div className="relative w-full h-[250px]">
                     <img
                         src={image}
                         alt="project_image"
                         className="w-full h-full object-cover rounded-2xl"
                     />
-
                 </div>
 
                 <div className="!mt-5">
@@ -29,9 +27,12 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                 </div>
 
                 <div className="!mt-4 flex flex-wrap gap-2">
-                    {tags.map((tag) => (
-                        <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
-                            #{tag.name}
+                    {(Array.isArray(tags) ? tags : []).map((tag, i) => (
+                        <p
+                            key={`${name}-${tag?.name ?? i}`}
+                            className={`text-[14px] ${tag?.color ?? ""}`}
+                        >
+                            #{tag?.name ?? "tag"}
                         </p>
                     ))}
                 </div>
@@ -39,5 +40,48 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </motion.div>
     );
 };
+
+// const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+//     return (
+//         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+//             <Tilt
+//                 tiltMaxAngleX={45}
+//                 tiltMaxAngleY={45}
+//                 scale={1}
+//                 transitionSpeed={450}
+//                 className="bg-[#151030] !p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
+//             >
+//                 {/* 1. Removed fixed height. The div now wraps the image perfectly */}
+//                 <div className="relative w-full">
+//                     <img
+//                         src={image}
+//                         alt={name}
+//                         // 2. Applied rounded-2xl directly to the img
+//                         // 3. Removed object-cover/contain so the full image displays
+//                         className="w-full h-auto rounded-2xl shadow-lg shadow-black/20"
+//                     />
+//                 </div>
+
+//                 <div className="!mt-5">
+//                     <h3 className="text-white font-bold text-[24px]">{name}</h3>
+//                     <p className="!mt-2 text-secondary text-[14px] leading-relaxed">
+//                         {description}
+//                     </p>
+//                 </div>
+
+//                 <div className="!mt-4 flex flex-wrap gap-2">
+//                     {(Array.isArray(tags) ? tags : []).map((tag, i) => (
+//                         <p
+//                             key={`${name}-${tag?.name ?? i}`}
+//                             className={`text-[14px] ${tag?.color ?? ""}`}
+//                         >
+//                             #{tag?.name ?? "tag"}
+//                         </p>
+//                     ))}
+//                 </div>
+//             </Tilt>
+//         </motion.div>
+//     );
+// };
 
 export default ProjectCard;

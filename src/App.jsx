@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Works from "./components/Works";
+import Certifcations from "./components/Certifcations";
 
 
 
@@ -24,7 +25,8 @@ function App() {
         <TechStack/>
         {/* Projects  */}
         <Works/>
-        {/* Events Joined  */}
+        {/* Certifications  */}
+        <Certifcations/>
         <div className="relative z-0">
           {/* Contact Me  */}
           {/* Star Canvas */}
