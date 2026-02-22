@@ -5,6 +5,7 @@ import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Works from "./components/Works";
 import Certifcations from "./components/Certifcations";
+import Contact from "./components/Contact";
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Certifcations/>
         <div className="relative z-0">
           {/* Contact Me  */}
+          <Contact/>
           {/* Star Canvas */}
         </div>
 

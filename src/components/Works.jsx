@@ -24,6 +24,7 @@ import FootballPredictions from "../assets/FootballPredictions.png";
 import PeppersQuiz from "../assets/PeppersQuiz.png";
 import Eric from "../assets/Eric4Sons.png";
 import Portfolio from "../assets/Portfolio.png"
+import MoreProjectsCard from "./MoreProjectsCard";
 
 const schoolProjects = [
     {
@@ -416,7 +417,13 @@ const listVariants = {
 /* eslint-disable react-refresh/only-export-components */
 const Works = () => {
     const [activeTab, setActiveTab] = useState("school");
-    const data = activeTab === "school" ? schoolProjects : personalProjects;
+    // const data = activeTab === "school" ? schoolProjects : personalProjects;
+    const baseData = activeTab === "school" ? schoolProjects : personalProjects;
+
+    const data =
+        activeTab === "personal"
+            ? [...baseData, { __placeholder: true }]
+            : baseData;
 
     return (
         <>
@@ -440,15 +447,20 @@ const Works = () => {
                 key={activeTab}
                 variants={listVariants}
                 initial="hidden"
-                animate="show"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.1 }}
                 className="!mt-10 flex flex-wrap gap-7 justify-center"
             >
                 {data.length === 0 ? (
                     <p className="text-white/70 text-center w-full">No projects yet.</p>
                 ) : (
-                    data.map((project, index) => (
-                        <ProjectCard key={`${project.name}-${index}`} index={index} {...project} />
-                    ))
+                    data.map((project, index) =>
+                        project.__placeholder ? (
+                            <MoreProjectsCard key="more-projects" index={index} />
+                        ) : (
+                            <ProjectCard key={`${project.name}-${index}`} index={index} {...project} />
+                        )
+                    )
                 )}
             </motion.div>
         </>

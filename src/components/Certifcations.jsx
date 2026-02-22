@@ -16,6 +16,7 @@ import Microsoft365 from "../assets/Cert3.png";
 import ThoughtfulOnlineSolution from "../assets/Cert4.png";
 import StreamlineMicrosoft from "../assets/Cert5.png";
 import WhatsGenerativeAI from "../assets/Cert6.png";
+import AIMicrosoft from "../assets/AIMicrosoft.png"
 
 const Certifications = [
     {
@@ -61,34 +62,57 @@ const Certifications = [
         image: StreamlineMicrosoft,
     },
     {
-        name: "What’s Generative AI?",
+        name: "What's Generative AI?",
         description:
             "Introduction to GenAI concepts, capabilities, and limitations with real examples.",
         Source: [{ name: "LinkedIn", color: "blue-text-gradient" }],
         image: WhatsGenerativeAI,
     },
+    {
+        name: "Responsible use of Microsoft Foundry",
+        description:
+            "Foundational understanding in how to responsibly use Microsoft Foundry",
+        Source: [{ name: "Microsoft", color: "pink-text-gradient" }],
+        image: AIMicrosoft,
+    },
 ];
+
+const listVariants = {
+    hidden: {},
+    show: {
+        transition: { staggerChildren: 0.08, delayChildren: 0.02 },
+    },
+};
 
 /* eslint-disable react-refresh/only-export-components */
 const Certifcations = () => {
     const [openCert, setOpenCert] = useState(null);
 
-    // lock body scroll when modal open + ESC to close
     useEffect(() => {
+        if (!openCert) return;
+
         const onKeyDown = (e) => {
             if (e.key === "Escape") setOpenCert(null);
         };
 
-        if (openCert) {
-            document.body.style.overflow = "hidden";
-            window.addEventListener("keydown", onKeyDown);
-        } else {
-            document.body.style.overflow = "";
+        // Save previous inline styles (so we restore perfectly)
+        const prevOverflow = document.body.style.overflow;
+        const prevPaddingRight = document.body.style.paddingRight;
+
+        // Compensate for scrollbar width to prevent “grid jump”
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        document.body.style.overflow = "hidden";
+        if (scrollbarWidth > 0) {
+            document.body.style.paddingRight = `${scrollbarWidth}px`;
         }
 
+        window.addEventListener("keydown", onKeyDown);
+
         return () => {
-            document.body.style.overflow = "";
             window.removeEventListener("keydown", onKeyDown);
+            document.body.style.overflow = prevOverflow;
+            document.body.style.paddingRight = prevPaddingRight;
         };
     }, [openCert]);
 
@@ -109,7 +133,13 @@ const Certifcations = () => {
             </motion.p>
 
             {/* Cards grid (Projects-style) */}
-            <div className="!mt-10 flex flex-wrap gap-7 justify-center">
+            <motion.div
+                variants={listVariants}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.1 }}
+                className="!mt-10 flex flex-wrap gap-7 justify-center"
+            >
                 {Certifications.map((c, index) => (
                     <CertificationsCard
                         key={`${c.name}-${index}`}
@@ -121,51 +151,66 @@ const Certifcations = () => {
                         onOpen={() => setOpenCert(c)}
                     />
                 ))}
-            </div>
+            </motion.div>
 
             {/* Modal */}
             <AnimatePresence>
                 {openCert && (
                     <motion.div
-                        className="fixed inset-0 z-[99999] bg-black/75 backdrop-blur-sm flex items-center justify-center p-4"
+                        className="fixed inset-0 z-[99999] bg-black/75 backdrop-blur-sm flex items-center justify-center !px-5"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onMouseDown={() => setOpenCert(null)} // click outside closes
                     >
                         <motion.div
-                            className="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-[#0b0b14] p-3 sm:p-4"
+                            className="
+                                w-full max-w-5xl rounded-2xl border border-white/10 bg-[#0b0b14]
+                                overflow-hidden
+                            "
                             initial={{ scale: 0.96, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.96, opacity: 0 }}
                             transition={{ type: "spring", stiffness: 260, damping: 24 }}
                             onMouseDown={(e) => e.stopPropagation()} // prevent closing when clicking inside
                         >
-                            {/* Close button */}
-                            <button
-                                type="button"
-                                onClick={() => setOpenCert(null)}
-                                className="
-                                    absolute top-3 right-3 z-10
-                                    w-10 h-10 rounded-xl
-                                    bg-white/5 hover:bg-white/10
-                                    border border-white/10
-                                    flex items-center justify-center
-                                    text-white cursor-pointer
-                                "
-                                aria-label="Close"
-                            >
-                                ✕
-                            </button>
+                            {/* Header bar (X is OUTSIDE the image) */}
+                            <div className="flex items-center justify-between !px-3 !py-2 border-b border-white/10 bg-white/[0.02]">
+                                <p className="text-white/90 font-semibold text-sm sm:text-base truncate pr-3">
+                                    {openCert.name}
+                                </p>
 
-                            {/* Big image */}
-                            <div className="w-full max-h-[75vh] overflow-auto rounded-xl border border-white/10 bg-black/30">
-                                <img
-                                    src={openCert.image}
-                                    alt={openCert.name}
-                                    className="w-full h-auto object-contain"
-                                    draggable="false"
-                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setOpenCert(null)}
+                                    className="
+                                        w-10 h-10 rounded-xl
+                                        bg-white/5 hover:bg-white/10
+                                        border border-white/10
+                                        flex items-center justify-center
+                                        text-white cursor-pointer
+                                        transition
+                                        focus:outline-none focus:ring-2 focus:ring-white/20
+                                    "
+                                    aria-label="Close"
+                                >
+                                    ✕
+                                </button>
+                            </div>
+
+                            {/* Image area (NO SCROLL — image scales to fit screen) */}
+                            <div className="p-3 sm:p-4 flex items-center justify-center">
+                                <div className="w-full rounded-xl border border-white/10 bg-black/30 p-2 flex items-center justify-center">
+                                    <img
+                                        src={openCert.image}
+                                        alt={openCert.name}
+                                        className="
+                                            max-w-full w-auto h-auto object-contain
+                                            max-h-[calc(100vh-10rem)] sm:max-h-[calc(100vh-12rem)]
+                                        "
+                                        draggable="false"
+                                    />
+                                </div>
                             </div>
                         </motion.div>
                     </motion.div>
