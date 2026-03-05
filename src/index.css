@@ -241,3 +241,7 @@
 .animate-orbit {
   animation: orbit calc(var(--duration) * 1s) linear infinite;
 }
+
+.bg-hero-pattern {
+  background-image: url('/src/assets/herobg.png');
+}
