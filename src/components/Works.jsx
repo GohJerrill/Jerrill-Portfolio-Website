@@ -427,22 +427,35 @@ const Works = () => {
 
     return (
         <>
-            <motion.div variants={textVariant()}>
+            {/* Title (self-trigger) */}
+            <motion.div
+                variants={textVariant()}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.6, margin: "-120px 0px -10% 0px" }}
+                className="!mt-20"
+            >
                 <p className={`${styles.sectionSubText} !mb-1 text-center`}>Projects</p>
                 <h2 className={`${styles.sectionHeadText} text-gray-300 leading-tight text-center`}>
                     My Works.
                 </h2>
             </motion.div>
 
+            {/* Subtitle (self-trigger) */}
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.6, margin: "-120px 0px -10% 0px" }}
                 className="!mt-5 w-full text-white text-[17px] text-center !px-10"
             >
-                Here is my IT projects that I have done thus far. I have seperated it to School and personal HEHEH
+                Here is my IT projects that I have done thus far. I have seperated it to School and personal
+                HEHEH
             </motion.p>
 
             <ProjectFilterPill active={activeTab} onChange={setActiveTab} />
 
+            {/* Cards grid (same animation style as Certs) */}
             <motion.div
                 key={activeTab}
                 variants={listVariants}

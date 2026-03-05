@@ -6,6 +6,8 @@ import TechStack from "./components/TechStack";
 import Works from "./components/Works";
 import Certifcations from "./components/Certifcations";
 import Contact from "./components/Contact";
+import { StarsCanvas } from "./components/canvas";
+import Footer from "./components/Footer";
 
 
 
@@ -28,11 +30,15 @@ function App() {
         <Works/>
         {/* Certifications  */}
         <Certifcations/>
-        <div className="relative z-0">
+        <div className="relative z-0 overflow-hidden !mt-10">
           {/* Contact Me  */}
           <Contact/>
           {/* Star Canvas */}
+          <StarsCanvas/>
         </div>
+
+        {/* Footer */}
+        <Footer/>
 
       </div>
     </BrowserRouter>

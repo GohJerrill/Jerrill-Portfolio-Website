@@ -34,7 +34,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 md:left-5 lg:left-24 sm:left-24 z-50 bg-[#050816] shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050816] shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
 
             {/* Header row */}
             <div className="mx-auto w-full max-w-7xl py-4 px-6 sm:px-0 sm:pl-12 sm:pr-10">
@@ -53,7 +53,8 @@ const Navbar = () => {
                         <img
                             src={Logo}
                             alt="Logo"
-                            className="w-16 h-16 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain shrink-0"
+
+                            className="w-16 h-16 md:!ml-5 lg:!ml-24 sm:!ml-24 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain shrink-0"
                         />
 
                     </Link>

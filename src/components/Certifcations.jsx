@@ -198,7 +198,7 @@ const Certifcations = () => {
                                 </button>
                             </div>
 
-                            {/* Image area (NO SCROLL — image scales to fit screen) */}
+                            
                             <div className="p-3 sm:p-4 flex items-center justify-center">
                                 <div className="w-full rounded-xl border border-white/10 bg-black/30 p-2 flex items-center justify-center">
                                     <img
