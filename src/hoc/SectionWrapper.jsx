@@ -1,22 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
 const SectionWrapper = (Component, idName) =>
-    function HOC() {
-        return (
-            <motion.section
-                id={idName}
-                variants={staggerContainer()}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.25 }}
-            >
-                <span className="hash-span" id={idName}>&nbsp;</span>
-                <Component />
-            </motion.section>
-        );
-    };
+  function HOC() {
+    return (
+      <motion.section
+        id={idName}
+        className="relative scroll-mt-[96px]" 
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <Component />
+      </motion.section>
+    );
+  };
 
 export default SectionWrapper;

@@ -266,4 +266,4 @@ function formatCooldown(seconds) {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
 }
 
-export default SectionWrapper(Contact, "Contact Me");
+export default SectionWrapper(Contact, "contact");

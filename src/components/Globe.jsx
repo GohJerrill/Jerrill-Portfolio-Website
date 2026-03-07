@@ -18,7 +18,7 @@ const GLOBE_CONFIG = {
     mapSamples: 16000,
     mapBrightness: 1.2,
 
-    // ✅ default white globe + orange markers
+    
     baseColor: [1, 1, 1],
     glowColor: [1, 1, 1],
     markerColor: [251 / 255, 100 / 255, 21 / 255],
@@ -82,7 +82,7 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
             onRender: (state) => {
                 const w = widthRef.current;
 
-                if (!pointerInteracting.current) phiRef.current += 0.005;
+                if (!pointerInteracting.current) phiRef.current += 0.002;
 
                 state.phi = phiRef.current + rs.get();
                 state.width = w * 2;

@@ -9,40 +9,38 @@ import Contact from "./components/Contact";
 import { StarsCanvas } from "./components/canvas";
 import Footer from "./components/Footer";
 
-
-
 function App() {
-
-
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
+        <span id="Home" className="hash-span">
+          &nbsp;
+        </span>
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           {/* Navbar IM FAT*/}
-          <Navbar/>
+          <Navbar />
           {/* Hero */}
-          <Hero/>
+          <Hero />
         </div>
-        <About/>
+        <About />
         {/* Tech Stack and Certs */}
-        <TechStack/>
+        <TechStack />
         {/* Projects  */}
-        <Works/>
+        <Works />
         {/* Certifications  */}
-        <Certifcations/>
+        <Certifcations />
         <div className="relative z-0 overflow-hidden !mt-10">
           {/* Contact Me  */}
-          <Contact/>
+          <Contact />
           {/* Star Canvas */}
-          <StarsCanvas/>
+          <StarsCanvas />
         </div>
 
         {/* Footer */}
-        <Footer/>
-
+        <Footer />
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
