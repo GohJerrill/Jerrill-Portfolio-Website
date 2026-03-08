@@ -144,7 +144,50 @@ export const schoolProjects = [
       },
     ],
     image: TPUnite,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/GohJerrill/Cloud-AWS-Microservice",
+    live_link: "https://www.youtube.com/watch?v=UjgwlVwT4qQ",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "Many Temasek Polytechnic (TP) students are eager to support their favourite sport teams during competitions, however they often lack the necessary information to do so. Crowd support can make a huge difference to a team’s performance, yet students are frequently left to dig for information at the various CCA’s Instagram pages to find competition’s dates, venue or result which can be inconvenient and time consuming. Thus, I propose TP Unite (A cloud based web application using AWS), a centralise website that collates and display competition schedules and match details for TP Sports CCAs. The respective CCA admin in this website will populate and update the data on the platform for student's viewing.",
+      },
+      {
+        title: "Features",
+        items: [
+          "View matches - Allows user to view the different matches, live, past or in the future",
+          "Favourite CCA - Allows the user to favourite their CCA, to show support to their CCA.",
+          "Predictions - When the user enters the match, he is able to make a prediction on which team will win",
+          "Comments - When the user enters a match, they are able to leave comments to discuss with others about the game.",
+          "Login for user - Using AWS Cognito, Users can login and use the application.",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content:
+          "The primary target audience is TP Students; however, the platform also welcomes alumni, family members and supporters who wish to support their team.",
+      },
+      {
+        title: "Learning Outcomes",
+        items: [
+          "First time touching AWS cloud solutions, learned a lot of the different services.",
+          "First time being exposed to a NoSQL database, DynamoDB",
+          "Learned Microservice Architecture",
+        ],
+      },
+      {
+        title: "Future Enhancements",
+        items: [
+          "Plan to make my application responsive",
+          "Make the Favourite CCA feature better, by including favourite CCA at the top",
+        ],
+      },
+      {
+        title: "** Note ** ",
+        content:
+          "This Project was done in my School Learner lab for AWS, thus, the hosting is now not available.",
+      },
+    ],
   },
   {
     name: "TPEventure",
@@ -252,7 +295,51 @@ export const schoolProjects = [
       },
     ],
     image: NatureQuest,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/GohJerrill/PROJECT-3-Flutter",
+    live_link: "https://www.youtube.com/watch?v=kyqBEdcivK0",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "To a build a greener and more sustainable future, Singapore have embraced 5 key pillars. One of these pillars City in Nature, aims to bring nature more deeply into urban life and protect the florae and fauna of Singapore. However, as Singapore continue to rapidly urbanize from a developing country to a metropolis, many of its rich natural biodiversity are being loss to steel and concrete. To address this, I have made an application that addresses both pillars called Nature Quest. It was designed for users to reconnect to the greener side in Singapore. By completing nature-based missions like visiting parks, spotting wildlife and participating in eco events, it will contribute to the growth of growing their very own virtual plant. This reinforces the user's role in building a greener future.",
+      },
+      {
+        title: "Main Goals",
+        items: [
+          "Many Singaporeans are used to urban lifestyle and have grown distant from the natural environment. Thus, Nature Quest provides daily tasks and challenges for users to go to parks, nature reserves, go cycling and eco events.",
+          "In the Nature Quest there are also small mini facts and explanations in the description of the challenges that the user is doing. This can educate and raise environment literacy to the users about Singapore's rich biodiversity and ways to be live more sustainably.",
+          "Finally, the growth points earned by the user from completing the challenges will grow their virtual tree. This promotes connection and user engagement to the app.",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content:
+          "People living in Singapore both young and old willing to make a difference environmentally in Singapore.",
+      },
+      {
+        title: "Features",
+        items: [
+          "Login and Authentication - This allows the user to login using email/password, Google and Micosoft account. This is supported by Firebase Auth",
+          "Challenges and challenges - Users can choose and challenge and upload a picture to complete the challenge to earn points.",
+          "Virtual Trees - User is able to perform CRUD operations on this feature. Every tree has a max point and user must used earned points to sucessfully grow their plants,",
+        ],
+      },
+      {
+        title: "Learning Outcome",
+        items: [
+          "Learned Mobile Application Devlopment using Flutter and Dart",
+          "Learned how to use Firebase Auth and Firebase.",
+        ],
+      },
+      {
+        title: "Future Enhancements",
+        items: [
+          "Improve the Challenge feature as there are some features require user geolocation.",
+          "I plan to implement a notification feature, where it will remind users when their challenges run out of time.",
+          "Lastly I plan to implement a badge feature in the app icon displaying all in progress challenges, reminding the user to complete them.",
+        ],
+      },
+    ],
   },
   {
     name: "GrowMate",
@@ -353,7 +440,8 @@ export const schoolProjects = [
       },
       {
         title: "** Note **",
-        content: "This application was done on a Innovation Learner Lab Account, thus the hosting is now not available."
+        content:
+          "This application was done on a Innovation Learner Lab Account, thus the hosting is now not available.",
       },
     ],
   },
@@ -393,7 +481,25 @@ export const schoolProjects = [
       },
     ],
     image: IITQuestSecurity,
-    source_code_link: "https://github.com/",
+    source_code_link:
+      "https://github.com/GohJerrill/ApplicationSecurity_Project",
+    live_link: "https://www.youtube.com/watch?v=EkwccUEuSe8",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "This is a security subject where I reused my old design from IIT Quest. The main goal of this project is learning application security specifically in Authentication and keeping our application redundant against threats stated in Owasp top 10.",
+      },
+      {
+        title: "Features",
+        items: [
+          "Secure user login, user Mongo DB and JsonWebTokens",
+          "Integrated Recaptcha for further security against bots",
+          "To enhance security, I implemented Multi-Factor Authentication TOTP",
+          "Implemented Account Log out if user fails mulitple times",
+        ],
+      },
+    ],
   },
 
   {
@@ -435,7 +541,38 @@ export const schoolProjects = [
       },
     ],
     image: CineMEI,
-    source_code_link: "https://github.com/",
+    source_code_link:
+      "https://github.com/GohJerrill/DEVOPS_Project_CineMEI-GohJerrill",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "CineMEI is a movie management web application that enables user to view, organise, and manage their movie library. Its a group project where my team has implemented CRU Features. This Project ultimate aim was for us to explore the DevOps lifecycle and its tools with a simple html web application.",
+      },
+      {
+        title: "Target Audience",
+        content: "For users viewing, editing and deleting movies.",
+      },
+      {
+        title: "Features",
+        items: [
+          "Use Jenkins to automate the CI/CD lifecycle",
+          "Utlised Jest, Playwright, Postman/Newman, Mocha+Chai and Cypress for backend, API and frontend testing",
+          "Leveraged Docker and Kubernetes/MiniKube for Deployment. Managed to implement Github Actions, Podman, and Azure Cloud Kubernetes for alternative CI/CD workflow.",
+        ],
+      },
+      {
+        title: "Learning Outcomes HEHEHE",
+        items: [
+          "Learned the main DevOps CI/CD worflow of Build, Test and Deploy.",
+          "Familiarised myself with multiple DevOps tools",
+        ],
+      },
+      {
+        title: "Future Enhancements",
+        items: ["Implement monitor feature using tools like Data Dog"],
+      },
+    ],
   },
 
   {
@@ -546,7 +683,39 @@ export const schoolProjects = [
       },
     ],
     image: TPSeatria,
-    source_code_link: "https://github.com/",
+    live_link:
+      "https://www.figma.com/design/knn8b2R1Bphe0ugGvFqFVK/AGILE-Wireframe?node-id=0-1&t=jbtF11zVptlhHZkN-1",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "This project was done for my Agile/SCRUM project. The Mobile application figma design name is TP Seatria. This applications main purpose to help Temasek Polytechnic students find comfortable and conducive study spaces. There are 3 problems that arises, first study areas that are popular often overcrowded, while lesser known study spaces are underutilize. 2nd problem students are not willing to search lesser known study spaces, and finally a lack of real time positive and negative information of a study space inhibits students to make smart decisions.",
+      },
+      {
+        title: "Features",
+        items: [
+          "A map showing all the available study area in Temasek Polytechnic - This will show the different study areas to the users so that they can know which study area that they want to use, even those that are not visible to them.",
+          "Finding the study area. - Based on the user's location, the application can help the user find the best rated and most convenient study space available. The user can also click on the different study spaces and find that specific study space. This can help them find the study spaces more convenient to them which improves user's experience.",
+          "Rating on the study space - When the users click on the study spaces, the study space's positive and negative ratings will appear. This can help the student be more aware of the different study spaces limitations, like for example if a certain study space has no charger, than they should have their computers fully charged first and use that study space for a short while. This can also be a feedback to the school's facilities management for poorly rated study spaces",
+          "Scanning for table - When the user has found their perfect study area to use, they scan the QR code available on the study area and use the table. Depending on the rarity of the study area they will get their reward points",
+          "Redeeming rewards - The user can use their reward points to redeem rewards from the reward page. Rewards can be like $5 coupon for Western Stall in IIT canteen. $10 voucher for stationary vending machine in HSS. This gives the user incentives to explore and utilize all study spaces efficiently.",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content:
+          "Temasek Polytechnic students finding it hard to search for studies spaces during peak exam periods.",
+      },
+      {
+        title: "Learning Outcomes",
+        items: [
+          "Learnt crucial Agile Principles during software development",
+          "Learned how to craft sprints, epic and backlogs",
+          "Learned the MosCow prioritisation approach.",
+          "The value of defintion of done",
+        ],
+      },
+    ],
   },
 ];
 
