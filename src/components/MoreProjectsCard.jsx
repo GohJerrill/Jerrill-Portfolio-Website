@@ -18,7 +18,7 @@ const MoreProjectsCard = ({ index = 0 }) => {
           sm:w-[360px] w-full
           !p-5
           flex flex-col items-center justify-center
-          min-h-[420px]
+          min-h-[450px]
           text-center
           transition-transform duration-300
           hover:scale-[0.98]

@@ -35,43 +35,30 @@ export const schoolProjects = [
       },
     ],
     image: IITQuest,
-    source_code_link: "https://github.com/",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "First ever project about HTML, CSS and JS. IIT Quest gives user the head start in providing a gamified approach into preparation before the semester begins.",
+      },
+      {
+        title: "Features",
+        items: [
+          "Gamified learning concept for incoming students",
+          "Interactive frontend using HTML, CSS and JavaScript",
+          "Simple and clean user flow for early exposure to school content",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content: "Students who want a head start before the semester begins.",
+      },
+      {
+        title: "Learning Outcomes SIUUUU",
+        items: ["learn the basics about HTML, CSS and JS"],
+      },
+    ],
   },
-
-  // {
-  //   id: "iit-quest",
-  //   name: "IIT Quest",
-  //   description:
-  //     "My first ever assignment on HTML, CSS and JS. This is a gamified approach for students to learn before the school semester begins.",
-  //   tags: [
-  //     { name: "HTML", color: "orange-text-gradient" },
-  //     { name: "CSS", color: "blue-text-gradient" },
-  //     { name: "Javascript", color: "text-yellow-500" },
-  //   ],
-  //   image: IITQuest,
-  //   source_code_link: "https://github.com/",
-  //   live_link: "",
-  // modalSections: [
-  //   {
-  //     title: "Overview",
-  //     content:
-  //       "IIT Quest was my first project where I explored core frontend development using HTML, CSS, and JavaScript. The project uses gamification to make pre-semester learning more engaging for students.",
-  //   },
-  //   {
-  //     title: "Features",
-  //     items: [
-  //       "Gamified learning concept for incoming students",
-  //       "Interactive frontend using HTML, CSS and JavaScript",
-  //       "Simple and clean user flow for early exposure to school content",
-  //     ],
-  //   },
-  //   {
-  //     title: "Target Audience",
-  //     content:
-  //       "New students who want a head start before the semester begins.",
-  //   },
-  // ],
-  // },
   {
     name: "TP Vendings",
     description:
@@ -103,7 +90,38 @@ export const schoolProjects = [
       },
     ],
     image: TPVendings,
-    source_code_link: "https://github.com/",
+    source_code_link:
+      "https://github.com/GohJerrill/Application-Database_Development_Project",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "TP Vendings is a school project where it first introduced me to web applications with Database. We used a SQL database for this application along with HTMl, CSS and Javascript. I have also implemented CRUD operations for the admin user to Read, Create, Update and Delete.",
+      },
+      {
+        title: "Features",
+        items: [
+          "Allows the Admin user to Create new vending Machine Items",
+          "Allows the Admin user to Delete any Vending Machine Items",
+          "Allows the Admin user to Update any Vending Machine Items",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content: "TP Vending Machine Vendors HEHEH",
+      },
+      {
+        title: "Learning Outcome",
+        items: [
+          "Learned how Databases interact with the website frontend",
+          "Learned the fundamentals of a SQL database like foreign Key and Primary Key",
+        ],
+      },
+      {
+        title: "Future Enhancements",
+        items: ["Make the web application responsive"],
+      },
+    ],
   },
   {
     name: "TP Unite",
@@ -670,8 +688,41 @@ export const schoolProjects = [
       },
     ],
     image: RoyalHarmony,
-    source_code_link: "https://github.com/",
+    live_link: "https://re8rqj.axshare.com",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "Royal Harmony was a UI/UX project where we had to design a music app for users. This was my first experience in seeing how designing your application in a certain way can greatly impact the way a user navigates and uses your application. I did this project using Axure RP",
+      },
+      {
+        title: "Features",
+        items: [
+          "Login and input name feature",
+          "Elderly Friendly UI and youth UI",
+          "Rewards and point system",
+          "Save music to playlist",
+          "Tik Tok like music feature",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content: "Youths and Elderly who love Music",
+      },
+      {
+        title: "Learning Outcomes",
+        items: [
+          "Understand how a small design change can impact how users use your application",
+          "How to craft a User persona",
+          "How to craft a user Journey map",
+          "How to craft a story Board",
+          "How to craft usability testing",
+          "Lo-fi and Hi-fi",
+        ],
+      },
+    ],
   },
+
   {
     name: "TPSetria",
     description:
@@ -723,7 +774,7 @@ export const personalProjects = [
   {
     name: "Peppers Quiz",
     description:
-      "AWS powered web application for my community. Users login via a code, points are recorded and displayed on a leaderboard. Microservice Architecture.",
+      "AWS powered web application for my Christian brothers in TP. Users login via a code, points are recorded and displayed on a leaderboard. Microservice Architecture.",
     tags: [
       { name: "ReactJS", color: "blue-text-gradient" },
       { name: "API Gateway", color: "text-purple-300" },
@@ -731,7 +782,27 @@ export const personalProjects = [
       { name: "DynamoDB", color: "text-blue-200" },
     ],
     image: PeppersQuiz,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/GohJerrill/QuizBaby",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "This website is for my brothers and sisters in Christ in Temasek Poly. Its a Biblical Quiz that is powered by AWS. It features login for users via a code, it also has a quiz section where the user can choose the correct answer for the different questions. Lastly it features a leaderboards to track who gets the most questions right!",
+      },
+      {
+        title: "Features",
+        items: [
+          "Login using a code for users using Dynamo DB",
+          "Quiz feature that updates in real-time using API Gateway, Dynamo DB and Lambda",
+          "Leaderboard features",
+          "Video of encouragement",
+        ],
+      },
+      {
+        title: "Learning Outcome",
+        items: ["Reinforced my learning of using AWS"],
+      },
+    ],
   },
   {
     name: "Eric4Sons",
@@ -744,7 +815,32 @@ export const personalProjects = [
       },
     ],
     image: Eric,
-    source_code_link: "https://github.com/",
+    live_link:
+      "https://www.figma.com/design/0BhGKWUCMqjtiJp3achVn5/API-Hackathon?node-id=0-1&t=xghjHOEIaD3cYacr-1",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "Me and my teamates devloped this Figma idea for PolyFintech Hackathon 2025.",
+      },
+      {
+        title: "Features",
+        items: [
+          "Split the Bill feature allowing NETS users to pay their own share when dining together.",
+          "Challenges feature allows user to complete simple challenges to keep a streak for a chance to win prizes by spinning the wheel.",
+          "Ai Fraud Detection to detect and fradulent transactions and inform the users about it",
+          "Unlock and Earn allows user to share different discounts with each other to keep the trend of NETS",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content: "Anybody and Everybody HEHEHEH",
+      },
+      {
+        title: "Learning Outcome",
+        items: ["Going put cool stuff", "BRUH", "BRUH"],
+      },
+    ],
   },
   {
     name: "Portfolio Website",
@@ -769,6 +865,35 @@ export const personalProjects = [
       },
     ],
     image: Portfolio,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/GohJerrill/Jerrill-Portfolio-Website",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "WHATS UP TO THIS PROJECT MY BROTHERS AND SISTERS. This project took time, effort and a broken computer to complete. I hope you are able to learn more about me through this website. Interested to learn more about you! HEHEHE",
+      },
+      {
+        title: "Features",
+        items: [
+          "Home displaying a computer 3D model using ThreeJS",
+          "Tech Stack using Magic Ui Wheel",
+          "Projects using React Framer Motion and Tilt",
+          "Tech Stack using React Framer Motion",
+          "Finally contact me page using React Framer Motion and Magic UI Globe",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content: "Anybody and Everybody HEHEHEH",
+      },
+      {
+        title: "Learning Outcome",
+        items: [
+          "Learn how to implement 3D models in my web application using ThreejS",
+          "Learned how to integrate Magic UI components",
+          "Implemented TailWind CSS BABY!",
+        ],
+      },
+    ],
   },
 ];
