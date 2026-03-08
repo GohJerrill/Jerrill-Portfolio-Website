@@ -144,21 +144,23 @@ const Navbar = () => {
 
           {/* RIGHT */}
           <div className="justify-self-end">
-            <div className="hidden sm:flex gap-5 lg:gap-6">
+            <div className="hidden sm:flex gap-5 lg:gap-6 !mr-10">
               {socials.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group h-11 w-11 md:h-10 md:w-10 rounded-full
+                  className="
+                    group h-11 w-11 md:h-10 md:w-10 rounded-full
                     bg-black/80 border border-white/10
                     flex items-center justify-center
                     transition-all duration-300
                     hover:scale-110 hover:-translate-y-0.5
                     hover:border-white/20
                     hover:bg-linear-to-r hover:from-[#915eff] hover:via-sky-400 hover:to-emerald-400
-                    hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]"
+                    hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]
+                  "
                 >
                   <img
                     src={s.icon}
@@ -181,7 +183,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE drawer (your existing one can stay) */}
+      {/* MOBILE drawer */}
       <div
         className={`sm:hidden fixed inset-0 z-[10000] transition-opacity duration-300 ${
           toggle
@@ -239,7 +241,7 @@ const Navbar = () => {
 
           <div className="mt-auto pr-8 pb-16 pl-14 !px-3">
             <div className="w-full h-[1px] bg-white/10 mb-8 ml-6" />
-            <div className="flex gap-5">
+            <div className="flex gap-5 !mt-3">
               {socials.map((s) => (
                 <a
                   key={s.label}
