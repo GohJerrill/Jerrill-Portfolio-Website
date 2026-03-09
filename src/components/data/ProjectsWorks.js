@@ -821,24 +821,24 @@ export const personalProjects = [
       {
         title: "Overview",
         content:
-          "Me and my teamates devloped this Figma idea for PolyFintech Hackathon 2025.",
+          "The competition problem statement was: How can NETS payments become more prevalent among the youth segment aged 15 to 24 years? Our solution include 4 main feature to secure and make NETS more relevant for youths in Singapore.",
       },
       {
         title: "Features",
         items: [
-          "Split the Bill feature allowing NETS users to pay their own share when dining together.",
-          "Challenges feature allows user to complete simple challenges to keep a streak for a chance to win prizes by spinning the wheel.",
-          "Ai Fraud Detection to detect and fradulent transactions and inform the users about it",
-          "Unlock and Earn allows user to share different discounts with each other to keep the trend of NETS",
+          "Unlock and Earn. A user referral streak for cashbacks and user retention. ",
+          "Daily Challenges. A gamified approach where the user has to complete all challenges in a day to build the streak and earn rewards. This ensures NETS is not just a payment network but become a lifestyle companion.",
+          "Ai Fraud Detection. An Ai powered fraud detection to flag out any suspicious activities.",
+          "Consolidated Billing. A feature where users can pay for their own share when out with friends.",
         ],
       },
       {
-        title: "Target Audience",
-        content: "Anybody and Everybody HEHEHEH",
-      },
-      {
         title: "Learning Outcome",
-        items: ["Going put cool stuff", "BRUH", "BRUH"],
+        items: [
+          "Network Payment Networks",
+          "How banks communicate to Network Payments Networks",
+          "The rise of Fintech in Singapore",
+        ],
       },
     ],
   },
