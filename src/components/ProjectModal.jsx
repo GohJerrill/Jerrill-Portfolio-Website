@@ -45,7 +45,6 @@ const ProjectModal = ({ project, onClose }) => {
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
             onMouseDown={(e) => e.stopPropagation()}
           >
-
             <div className="!px-5 sm:!px-6 !py-4 border-b border-white/10 bg-white/[0.02]">
               <h3 className="text-white font-extrabold text-[22px] sm:text-[28px] leading-tight">
                 {project.name}
@@ -54,14 +53,12 @@ const ProjectModal = ({ project, onClose }) => {
 
             <div className="max-h-[calc(100vh-10rem)] overflow-y-auto">
               <div className="!px-5 sm:!px-6 !py-6">
-
                 <img
                   src={project.image}
                   alt={project.name}
                   className="w-full rounded-xl object-cover border border-white/10"
                   draggable="false"
                 />
-
 
                 {project.tags?.length > 0 && (
                   <div className="!mt-6">
@@ -80,7 +77,6 @@ const ProjectModal = ({ project, onClose }) => {
                     </div>
                   </div>
                 )}
-
 
                 {project.modalSections?.map((section, index) => {
                   const hasContent =
@@ -118,7 +114,6 @@ const ProjectModal = ({ project, onClose }) => {
                     </div>
                   );
                 })}
-
 
                 <div className="!mt-8 flex flex-wrap gap-4">
                   {project.source_code_link && (
