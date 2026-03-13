@@ -79,8 +79,7 @@ const Works = () => {
         key={activeTab}
         variants={listVariants}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        animate="show"
         className="!mt-10 flex flex-wrap gap-7 justify-center"
       >
         {data.length === 0 ? (
