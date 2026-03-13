@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -24,12 +24,26 @@ const Works = () => {
   const [activeTab, setActiveTab] = useState("school");
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const baseData = activeTab === "school" ? schoolProjects : personalProjects;
+  const baseData = useMemo(
+    () => (activeTab === "school" ? schoolProjects : personalProjects),
+    [activeTab],
+  );
 
-  const data =
-    activeTab === "personal"
-      ? [...baseData, { __placeholder: true }]
-      : baseData;
+  const data = useMemo(
+    () =>
+      activeTab === "personal"
+        ? [...baseData, { __placeholder: true }]
+        : baseData,
+    [activeTab, baseData],
+  );
+
+  const handleOpenProject = useCallback((project) => {
+    setSelectedProject(project);
+  }, []);
+
+  const handleCloseProject = useCallback(() => {
+    setSelectedProject(null);
+  }, []);
 
   return (
     <>
@@ -77,23 +91,17 @@ const Works = () => {
               <MoreProjectsCard key="more-projects" index={index} />
             ) : (
               <ProjectCard
-                key={`${project.name}-${index}`}
+                key={project.id || `${project.name}-${index}`}
                 index={index}
-                {...project}
-                onClick={() => {
-                  console.log("clicked project:", project.name);
-                  setSelectedProject(project);
-                }}
+                project={project}
+                onOpen={handleOpenProject}
               />
             ),
           )
         )}
       </motion.div>
 
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
+      <ProjectModal project={selectedProject} onClose={handleCloseProject} />
     </>
   );
 };

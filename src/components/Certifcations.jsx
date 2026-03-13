@@ -119,7 +119,13 @@ const Certifcations = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()} className="!mt-20">
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.6, margin: "-120px 0px -10% 0px" }}
+        className="!mt-20"
+      >
         <p className={`${styles.sectionSubText} !mb-1 text-center`}>Certs</p>
         <h2
           className={`${styles.sectionHeadText} text-gray-300 leading-tight text-center`}
@@ -130,6 +136,9 @@ const Certifcations = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.6, margin: "-120px 0px -10% 0px" }}
         className="!mt-5 w-full text-white text-[17px] text-center !px-10"
       >
         Certifications, qualifications and credentials HEHEHEH

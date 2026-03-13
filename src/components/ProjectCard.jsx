@@ -1,17 +1,22 @@
-import React from "react";
+import React, { memo } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, image, onClick }) => {
+const ProjectCard = memo(({ index, project, onOpen }) => {
+  const { name, description, tags, image } = project;
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.2, 0.75)}>
-      <div onClick={onClick} className="sm:w-[360px] w-full cursor-pointer">
+      <div
+        onClick={() => onOpen(project)}
+        className="sm:w-[360px] w-full cursor-pointer"
+      >
         <Tilt
-          tiltMaxAngleX={45}
-          tiltMaxAngleY={45}
-          scale={1}
-          transitionSpeed={450}
+          tiltMaxAngleX={12}
+          tiltMaxAngleY={12}
+          scale={1.01}
+          transitionSpeed={300}
           className="bg-[#151030] !p-5 rounded-2xl w-full"
         >
           <div className="relative w-full h-[250px]">
@@ -19,6 +24,8 @@ const ProjectCard = ({ index, name, description, tags, image, onClick }) => {
               src={image}
               alt={name}
               className="w-full h-full object-cover rounded-2xl"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -41,6 +48,6 @@ const ProjectCard = ({ index, name, description, tags, image, onClick }) => {
       </div>
     </motion.div>
   );
-};
+});
 
 export default ProjectCard;

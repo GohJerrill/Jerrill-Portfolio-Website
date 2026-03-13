@@ -27,10 +27,11 @@ const ProjectModal = ({ project, onClose }) => {
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[99999] bg-black/75 backdrop-blur-sm flex items-center justify-center !px-5"
+          className="fixed inset-0 z-[99999] bg-black/80 flex items-center justify-center !px-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.12 }}
           onMouseDown={onClose}
         >
           <motion.div
@@ -42,13 +43,28 @@ const ProjectModal = ({ project, onClose }) => {
             initial={{ scale: 0.96, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.96, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 24 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             onMouseDown={(e) => e.stopPropagation()}
           >
-            <div className="!px-5 sm:!px-6 !py-4 border-b border-white/10 bg-white/[0.02]">
+            <div className="flex items-center justify-between gap-4 !px-5 sm:!px-6 !py-4 border-b border-white/10 bg-white/[0.02]">
               <h3 className="text-white font-extrabold text-[22px] sm:text-[28px] leading-tight">
                 {project.name}
               </h3>
+
+              <button
+                onClick={onClose}
+                aria-label="Close modal"
+                className="
+                  flex items-center justify-center
+                  w-10 h-10 rounded-xl
+                  text-white/70 hover:text-white
+                  bg-white/5 hover:bg-white/10
+                  border border-white/10
+                  transition cursor-pointer shrink-0
+                "
+              >
+                ✕
+              </button>
             </div>
 
             <div className="max-h-[calc(100vh-10rem)] overflow-y-auto">
