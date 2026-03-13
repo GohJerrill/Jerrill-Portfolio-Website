@@ -53,7 +53,6 @@ const Navbar = () => {
     scrollToId(item.id);
   };
 
-  // ✅ Scroll-spy (robust)
   useEffect(() => {
     const sections = navItems
       .filter((x) => x.id !== "Home")

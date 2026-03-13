@@ -5,14 +5,14 @@ import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
 import Resume2 from "../assets/GohJerrill_Resume - 2404219D - 2.pdf";
-import Testimonial from "../assets/testimonial.pdf";
+import Resume3 from "../assets/GohJerrill_Resume3.pdf"
 import PortfolioImage from "../assets/protfolio image.png";
 
 import { SectionWrapper } from "../hoc";
 
 /* eslint-disable react-refresh/only-export-components */
 const About = () => {
-  const HandleResumeClick = () => window.open(Resume2, "_blank");
+  const HandleResumeClick = () => window.open(Resume3, "_blank");
   const handleViewProjectsClick = () => {
     const projectsSection = document.getElementById("Projects");
     if (projectsSection) {

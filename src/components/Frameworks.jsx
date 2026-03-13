@@ -1,7 +1,7 @@
 import { OrbitingCircles } from "./OrbitingCircles";
 
 export function Frameworks() {
-    const outerSkills = ["react", "html5", "css3", "MongoDB", "tailwindcss", "vitejs", "kubernetes", "node", "Github", "Docker", "AWS", "Figma"];
+    const outerSkills = ["react", "html5", "css3", "MongoDB", "tailwindcss", "vitejs", "kubernetes", "node", "github-wheel", "Docker", "AWS", "Figma"];
     const middleSkills = ["javascript", "git", "azure", "MiniKube", "mysql", "Flutter", "Firebase", "CYPRESS-NEW-2", "Jest", "Playwrite", "DynamoDB"];
     const innerSkills = ["Dart", "Lambda", "Python", "Postman", "MaterialUI", "Jenkins-NEW"];
 
