@@ -52,7 +52,6 @@ const Works = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.6, margin: "-120px 0px -10% 0px" }}
-        className="!mt-20"
       >
         <p className={`${styles.sectionSubText} !mb-1 text-center`}>Projects</p>
         <h2
