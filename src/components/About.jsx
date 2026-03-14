@@ -22,7 +22,7 @@ const About = () => {
 
   return (
     <>
-      <div className="mt-4 !px-5 lg:!px-25 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start">
+      <div className="!mt-20 !px-5 lg:!px-25 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start">
         {/* IMAGE FIRST on mobile, RIGHT column on desktop */}
         <motion.div
           variants={fadeIn("left", "", 0.15, 1)}
