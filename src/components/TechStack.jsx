@@ -13,7 +13,7 @@ const TechStack = () => {
     const languageSkills = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Dart"];
 
     return (
-        <div className="!mt-20 lg:!pl-25 lg:!pr-0 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start overflow-x-hidden">
+        <div className="!mt-20 lg:!pl-25 lg:!pr-0 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-10 items-start overflow-x-hidden overflow-y-hidden">
             {/* TEXT SIDE */}
             <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
                 <motion.div variants={textVariant()} className="w-full">
