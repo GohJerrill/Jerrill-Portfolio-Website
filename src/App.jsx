@@ -29,7 +29,7 @@ function App() {
         <Works />
         {/* Certifications  */}
         <Certifcations />
-        <div className="relative z-0 overflow-hidden !mt-10">
+        <div className="relative z-0 overflow-hidden !mt-20">
           {/* Contact Me  */}
           <Contact />
           {/* Star Canvas */}
