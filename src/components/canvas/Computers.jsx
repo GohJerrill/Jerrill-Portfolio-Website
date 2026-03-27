@@ -23,7 +23,7 @@ const Computers = memo(function Computers({ isMobile }) {
         object={computer.scene}
         // Oringinally the Computer one: 0.83
         scale={isMobile ? 0.62 : 0.75}
-        position={isMobile ? [0, -2.2, -2.0] : [0, -3, -1.5]}
+        position={isMobile ? [0, -2.2, -2.0] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
         // Original One Here: 
         // scale={isMobile ? 0.7 : 0.75}
