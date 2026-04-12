@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
-import Resume2 from "../assets/GohJerrill_Resume - 2404219D - 2.pdf";
-import Resume3 from "../assets/GohJerrill_Resume3.pdf"
+import Resume from "../assets/GohJerrill_Resume4.pdf";
 import PortfolioImage from "../assets/protfolio image.png";
 
 import { SectionWrapper } from "../hoc";
 
 /* eslint-disable react-refresh/only-export-components */
 const About = () => {
-  const HandleResumeClick = () => window.open(Resume3, "_blank");
+  const HandleResumeClick = () => window.open(Resume, "_blank");
   const handleViewProjectsClick = () => {
     const projectsSection = document.getElementById("Projects");
     if (projectsSection) {
@@ -66,9 +65,9 @@ const About = () => {
               I'm a year 2 Temasek Polytechnic student studying a Diploma in
               Information Techology. I have a great passion in Full-Stack Web
               Development and application security. I love to explore new
-              technologies and have a strong foundation in React, App security and
-              Cloud Computing. <br /> <br />I am passionate to learn more in this
-              ever changing field! During my free time I usually spent time
+              technologies and have a strong foundation in React, App security
+              and Cloud Computing. <br /> <br />I am passionate to learn more in
+              this ever changing field! During my free time I usually spent time
               researching tech and also history HEHEHEH. Scroll and view more!
             </motion.p>
 
