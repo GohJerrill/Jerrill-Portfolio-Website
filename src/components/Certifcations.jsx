@@ -17,6 +17,7 @@ import ThoughtfulOnlineSolution from "../assets/Cert4.png";
 import StreamlineMicrosoft from "../assets/Cert5.png";
 import WhatsGenerativeAI from "../assets/Cert6.png";
 import AIMicrosoft from "../assets/AIMicrosoft.png";
+import LLM from "../assets/Cert7.png";
 
 const Certifications = [
   {
@@ -67,6 +68,13 @@ const Certifications = [
       "Introduction to GenAI concepts, capabilities, and limitations with real examples.",
     Source: [{ name: "LinkedIn", color: "blue-text-gradient" }],
     image: WhatsGenerativeAI,
+  },
+  {
+    name: "Introduction to Large Language Models",
+    description:
+      "Foundational understanding of large language models (LLMs), their capabilities, and technical concepts.",
+    Source: [{ name: "LinkedIn", color: "blue-text-gradient" }],
+    image: LLM,
   },
   {
     name: "Responsible use of Microsoft Foundry",
