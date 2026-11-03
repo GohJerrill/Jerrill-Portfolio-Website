@@ -62,8 +62,8 @@ const About = () => {
                        w-full max-w-[720px] mx-auto lg:mx-0
                        text-center lg:text-left"
             >
-              I'm a year 2 Temasek Polytechnic student studying a Diploma in
-              Information Techology. I have a great passion in Full-Stack Web
+              I'm a year 3 Temasek Polytechnic student studying a Diploma in
+              Information Techology. I am currently interning at Astar Research Agency and have a great passion in Full-Stack Web
               Development and application security. I love to explore new
               technologies and have a strong foundation in React, App security
               and Cloud Computing. <br /> <br />I am passionate to learn more in

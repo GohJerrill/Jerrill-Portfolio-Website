@@ -13,6 +13,9 @@ import FootballPredictions from "../../assets/FootballPredictions.png";
 import PeppersQuiz from "../../assets/PeppersQuiz.png";
 import Eric from "../../assets/Eric4Sons.png";
 import Portfolio from "../../assets/Portfolio.png";
+import CarelinkCCNDay from "../../assets/Carelink.png";
+import SDB from "../../assets/SDB.png";
+import MajorProject from "../../assets/MajorProject.png";
 // import MoreProjectsCard from "./MoreProjectsCard";
 
 export const schoolProjects = [
@@ -764,6 +767,259 @@ export const schoolProjects = [
           "Learned how to craft sprints, epic and backlogs",
           "Learned the MosCow prioritisation approach.",
           "The value of defintion of done",
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "Straits Digital Bank Forex",
+    description:
+      "This is a group project for my Year 3 subject. Straits Digital Bank is a forex trading application for Straits Digital Bank, allowing users to trade currencies with real-time market data and secure transactions.",
+    tags: [
+      {
+        name: "HTML",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "text-yellow-500",
+      },
+      {
+        name: "Open Banking APIs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Flask",
+        color: "text-blue-300",
+      },
+      {
+        name: "AWS",
+        color: "text-yellow-300",
+      },
+    ],
+    image: SDB,
+    source_code_link: "https://github.com/JevonsKhoo19/-DBFS-Investment-App",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "Straits Digital Bank is a forex trading application that allows users to trade currencies with real-time market data using Open Bankings APIs. The application is built using Vanilla JS and utilises AWS services for backend storage. This allows the application to use real data while allowing the user to trade currencies in a secure and efficient manner.",
+      },
+      {
+        title: "Main Goals",
+        items: [
+          "Allow users to learn about the different patterns and trends of the currency.",
+          "Allow users to trade currencies with real-time market data.",
+          "Allow users to discuss different currencies and their trends with other users.",
+        ],
+      },
+      {
+        title: "Features in respect to Open Banking APIs",
+        items: [
+          "Paypal User Profile, Allows the user to view their profile - Paypal Open Banking API",
+          "User Paypal Balance, Provides the user balance information along with any portfolio data present in AWS - Paypal Open Banking API + API Gateway",
+          "Forex Live + Historical Rates, To get the Live forex data for display in the homepage and transactions, and to get the historical data to display on the graphs. - EODHD",
+          "Forex Trader Sentiment, To retrieve the trader sentiment of the selected currency that the user is on - MyFxBook",
+          "Forex News API, To get general forex news. - Finnhub",
+          "Economic Calendar API, This is to display the Economic Calendar for the different currency regions. - EarningsAPI",
+          "Forex AI Analysis, For Gemini to analyses the historical data and output a generated response. - Gemini API",
+          "PayPal Purchase API for creating and capturing orders, To allow the user to purchase and buy foreign currency using SGD. - Paypal Open Banking API + API Gateway",
+          "PayPal Payout withdraw for foreign currency, To allow the user to withdrawal foreign currency to SGD. - Paypal Open Banking API + API Gateway",
+          "RSI market momentum, For the user to view the momentum of the currency. - AlphaVantage",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content: "Anybody who is interested in trading currencies.",
+      },
+      {
+        title: "Learning Outcomes",
+        items: [
+          "Learned how to implement Open Banking APIs to the application.",
+          "Learned how to perform Oauth 2.0 authentication via Paypal",
+          "Learned a new backend framework, Flask and how to use it to create a backend server.",
+          "Learned how to use AWS services like API Gateway, Lambda and DynamoDB to enhance the application and workaround any Paypal limitations.",
+        ],
+      },
+      {
+        title: "Future Improvements BABY",
+        items: [
+          "Implement future unit testing",
+          "Implement a notification feature where it can notify users whenever the forex currency is good",
+          "Implement a multicurrency feature, where users can trade in multiple currency rather than in only SGD",
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "Carelink CCN Day",
+    description:
+      "Carelink is a blockchain based decentralized application for managing stalls and transactions during CCN Day. I have used Sepolia Testnet to perform the blockchain interactions. ",
+    tags: [
+      {
+        name: "Ethereum Sepolia",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "ReactJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Ether.js",
+        color: "text-purple-300",
+      },
+      {
+        name: "Foundry",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Oracle Chainlink",
+        color: "text-blue-300",
+      },
+    ],
+    image: CarelinkCCNDay,
+    source_code_link: "https://github.com/GohJerrill/CCNDAY-Blockchain",
+    Foundry_Test_Code_Link:
+      "https://github.com/GohJerrill/Carelink-Foundry-Testing",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "CCN Day is a day in TP where students open stalls and raise funds for the needy in the school. CareLink is a blockchain-based decentralized application for managing stalls and transactions during CCN Day. Registered students and staff can apply for stalls, while the organiser manages CCN Day configuration and stall approval. Approved Stall Owners can manage their stalls and products, receive customer payments, issue full refunds, and withdraw remaining funds after the event. Payments are recorded on-chain and use Chainlink ETH/USD and Pyth USD/SGD oracle data to convert SGD-denominated amounts into the required ETH value.",
+      },
+      {
+        title: "Main Goals",
+        items: [
+          "Secure payments for the CCN Day events.",
+          "Transparent and immutable record of all transactions.",
+          "Decentralisation.",
+        ],
+      },
+      {
+        title: "Features",
+        items: [
+          "Secure and wallet based login and authentications for students, staff, organiser and customers",
+          "Seamless and efficient creation of CCN Days by organisers",
+          "Intuitive creation of stalls, products and withdrawal of funds by stall owners",
+          "Comprehensive stall history and transactional records for all users",
+          "Personalised account profiles for all users",
+          "Secure and transparent payments for customers using Chainlink and Pyth Oracle data to convert SGD to ETH",
+          "Foundry based unit testing to ensure the smart contract's functionality and logic is correct",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content:
+          "Temasek Polytechnic students and staff who are participating in CCN Day events, including stall owners, organisers, and customers.",
+      },
+      {
+        title: "Learning Outcomes",
+        items: [
+          "Learned how to implement a blockchain based decentralized application using ReactJS and Ether.js",
+          "Learned how to use Sepolia Testnet to perform blockchain interactions",
+          "Understand the importance of using Oracle data for currency conversion in blockchain applications",
+          "Understand the importance of unit testing in smart contract development and how to use Foundry for testing",
+        ],
+      },
+      {
+        title: "Future Improvements BABY",
+        items: [
+          "Better edge case and error handling",
+          "Host the React Frontend using vercel/Netlify or AWS.",
+          "Implement a QR Code feature where customers can scan the QR code to make payments directly to the stall owner's wallet",
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "AI Project Viewer",
+    description:
+      "Carelink is a blockchain based decentralized application for managing stalls and transactions during CCN Day. I have used Sepolia Testnet to perform the blockchain interactions. ",
+    tags: [
+      {
+        name: "AWS Cognito",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "ReactJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AWS Bedrock",
+        color: "text-purple-300",
+      },
+      {
+        name: "AWS API Gateway",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "AWS Lambda",
+        color: "text-blue-300",
+      },
+      {
+        name: "AWS Dynamno DB",
+        color: "text-blue-300",
+      },
+      {
+        name: "AWS Dynamno DB",
+        color: "text-blue-300",
+      },
+    ],
+    image: MajorProject,
+    source_code_link: "https://github.com/tpdeslab/Major-Project",
+    modalSections: [
+      {
+        title: "Overview",
+        content:
+          "CCN Day is a day in TP where students open  stalls and raise funds for the needy in the school. CareLink is a blockchain-based decentralized application for managing stalls and transactions during CCN Day. Registered students and staff can apply for stalls, while the organiser manages CCN Day configuration and stall approval. Approved Stall Owners can manage their stalls and products, receive customer payments, issue full refunds, and withdraw remaining funds after the event. Payments are recorded on-chain and use Chainlink ETH/USD and Pyth USD/SGD oracle data to convert SGD-denominated amounts into the required ETH value.",
+      },
+      {
+        title: "Main Goals",
+        items: [
+          "Secure payments for the CCN Day events.",
+          "Transparent and immutable record of all transactions.",
+          "Decentralisation.",
+        ],
+      },
+      {
+        title: "Features",
+        items: [
+          "Secure and wallet based login and authentications for students, staff, organiser and customers",
+          "Seamless and efficient creation of CCN Days by organisers",
+          "Intuitive creation of stalls, products and withdrawal of funds by stall owners",
+          "Comprehensive stall history and transactional records for all users",
+          "Personalised account profiles for all users",
+          "Secure and transparent payments for customers using Chainlink and Pyth Oracle data to convert SGD to ETH",
+          "Foundry based unit testing to ensure the smart contract's functionality and logic is correct",
+        ],
+      },
+      {
+        title: "Target Audience",
+        content:
+          "Temasek Polytechnic students and staff who are participating in CCN Day events, including stall owners, organisers, and customers.",
+      },
+      {
+        title: "Learning Outcomes",
+        items: [
+          "Learned how to implement a blockchain based decentralized application using ReactJS and Ether.js",
+          "Learned how to use Sepolia Testnet to perform blockchain interactions",
+          "Understand the importance of using Oracle data for currency conversion in blockchain applications",
+          "Understand the importance of unit testing in smart contract development and how to use Foundry for testing",
+        ],
+      },
+      {
+        title: "Future Improvements BABY",
+        items: [
+          "Better edge case and error handling",
+          "Host the React Frontend using vercel/Netlify or AWS.",
+          "Implement a QR Code feature where customers can scan the QR code to make payments directly to the stall owner's wallet",
         ],
       },
     ],

@@ -143,6 +143,17 @@ const ProjectModal = ({ project, onClose }) => {
                     </a>
                   )}
 
+                  {project.Foundry_Test_Code_Link && (
+                    <a
+                      href={project.Foundry_Test_Code_Link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/15 bg-white/5 !px-5 !py-3 text-white font-medium transition hover:bg-white/10"
+                    >
+                      Github Foundry test code
+                    </a>
+                  )}
+
                   {project.source_code_link_Backend && (
                     <a
                       href={project.source_code_link_Backend}

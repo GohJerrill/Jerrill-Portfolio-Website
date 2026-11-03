@@ -8,7 +8,7 @@ import { SectionWrapper } from "../hoc";
 /* eslint-disable react-refresh/only-export-components */
 const TechStack = () => {
     const FrontendSkills = ["React", "HTML", "CSS", "ThreeJS", "Framer Motion", "TailwindCSS", "MUI", "MagicUI", "Flutter", "AWS", "Vitejs", "Figma"];
-    const backendSkills = ["Node.js", "Express", "MySQL", "MongoDB", "Firebase", "DynamoDB", "RDS", "Lambda"];
+    const backendSkills = ["Node.js", "Express", "MySQL", "MongoDB", "Firebase", "DynamoDB", "RDS", "Lambda", "Flask", "FastAPI"];
     const devOpsSkills = ["Github", "Github Actions", "Jenkins", "PlayWright", "Jest", "Cypress", "Postman", "Docker", "Podman", "Kubernetes"];
     const languageSkills = ["JavaScript", "TypeScript", "HTML", "CSS", "Python", "Dart"];
 
